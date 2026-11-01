@@ -66,10 +66,10 @@ You need:
 - **a Slack workspace** where you can install apps;
 - **one coding agent** installed and signed in (Claude Code, Codex or OpenCode).
 
-1. **Publish the demo product.** Push [sample-app/](sample-app/) as its own GitHub repository. Or skip this and use your own product's repository.
+1. **Pick the product repository.** For the demo, use [featureroom-sample-app](https://github.com/KamayaniR/featureroom-sample-app), a small reports service. Or use your own product's repository.
 2. **Connect Slack in Switch Console.** switch-buddy can walk you through it.
 3. **Run the template.** In Console, open Templates and paste [featureroom.template.yaml](featureroom.template.yaml). Then fill in:
-   - **Product repository:** the URL from step 1.
+   - **Product repository:** `https://github.com/KamayaniR/featureroom-sample-app`, or your own.
    - **Default approver:** the Slack username of whoever approves features.
 4. **Open the room.** Console creates the four agents and `#feature-ideas`, and the host introduces itself.
 5. **Bring an idea:** `@feature-host customers keep asking to export their reports as CSV`.
@@ -80,10 +80,12 @@ You need:
 
 ## Repository layout
 
+The demo product lives in its own repository,
+[featureroom-sample-app](https://github.com/KamayaniR/featureroom-sample-app), so the agents read only the product's code and not these notes.
+
 | Path | What it is |
 |---|---|
 | `featureroom.template.yaml` | The Switch template: four agents, the ideas room, and the instructions that hold the rules |
-| `sample-app/` | A small reports service that the agents discuss features against |
 | `docs/workflow.md` | The workflow and its edge cases |
 | `docs/demo-script.md` | The scripted demo |
 
